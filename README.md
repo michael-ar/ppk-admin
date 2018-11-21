@@ -1,6 +1,6 @@
 # PPK admin front-end
 
-[admin.pints.run](admin.pints.run)
+[admin.pints.run](https://admin.pints.run)
 
 ### TODO
 - [ ] CI / CD pipeline

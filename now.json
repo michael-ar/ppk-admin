@@ -2,6 +2,7 @@
     "version": 2,
     "name": "ppk-admin",
     "alias": ["admin.pints.run"],
+    "regions": ["bru1"],
     "builds": [
         {
           "src": "next.config.js",
