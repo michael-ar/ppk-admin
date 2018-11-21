@@ -1,0 +1,24 @@
+{
+  "name": "ppk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export"
+  },
+  "author": "Michael Reynolds",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^5.5.8",
+    "next": "^7.0.2",
+    "react": "^16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.3"
+  }
+}

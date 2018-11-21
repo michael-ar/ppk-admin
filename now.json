@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "name": "ppk-admin",
+    "builds": [
+        {
+          "src": "next.config.js",
+          "use": "@now/next",
+          "config": { "maxLambdaSize": "25mb" }
+        }
+    ],
+    "env": {
+      "FIREBASE_API_KEY_SECRET": "@firebase-api-key",
+      "FIREBASE_SENDER_ID_SECRET": "@firebase-sender-id"
+    }
+}
