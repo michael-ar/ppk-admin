@@ -1,6 +1,7 @@
 {
     "version": 2,
     "name": "ppk-admin",
+    "alias": ["admin.pints.run"],
     "builds": [
         {
           "src": "next.config.js",
