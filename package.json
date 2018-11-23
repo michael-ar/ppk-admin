@@ -12,6 +12,7 @@
   "author": "Michael Reynolds",
   "license": "ISC",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "firebase": "^5.5.8",
     "next": "^7.0.2",
     "react": "^16.7.0-alpha.0",

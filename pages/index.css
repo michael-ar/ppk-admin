@@ -1,0 +1,48 @@
+:root {
+  --margin-vertical: 6px;
+  --padding: 12px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: center;
+  width: 300px;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--margin-vertical);
+}
+
+button {
+  margin-top: var(--margin-vertical);
+  width: 100%;
+}
+
+label input {
+  flex: 1;
+  margin-left: var(--padding);
+}
+
+@media (max-width: 420px) {
+  body {
+    align-items: flex-start;
+  }
+  form {
+    padding: var(--padding);
+    width: calc(100vw - var(--padding) - var(--padding));
+  }
+}
