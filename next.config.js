@@ -1,7 +1,9 @@
 const path = require('path');
+const withCSS = require('@zeit/next-css')
+
 const dev = process.env.NODE_ENV === 'development';
 
-module.exports = {
+module.exports = withCSS({
   publicRuntimeConfig: {
     FIREBASE_API_KEY: dev
       ? require('./credentials/firebase-admin').client.apiKey
@@ -14,4 +16,4 @@ module.exports = {
     config.resolve.alias.ppk = path.resolve('./');
     return config;
   },
-};
+});

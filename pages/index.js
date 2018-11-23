@@ -6,6 +6,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 import { firebase as firebaseConfig } from 'ppk/config';
+import 'ppk/pages/index.css';
 
 const { publicRuntimeConfig } = getConfig();
 const { FIREBASE_API_KEY, FIREBASE_SENDER_ID } = publicRuntimeConfig;
@@ -32,7 +33,7 @@ const NewRoute = () => (
     <form onSubmit={submitRoute}>
       <label>
         pub
-        <input type={'text'} name={'pub'} />
+        <input type={'text'} name={'pub'} autoFocus />
       </label>
       <label>
         distance
@@ -60,20 +61,13 @@ const Login = () => (
   <form onSubmit={login}>
     <label>
       email
-      <input type={'text'} name={'email'} />
+      <input type={'text'} name={'email'} autoFocus />
     </label>
     <label>
       password
       <input type={'password'} name={'password'} />
     </label>
     <input type={'submit'} value={'log in'} />
-    <style jsx>
-      {`
-        input {
-          width: 200px;
-        }
-      `}
-    </style>
   </form>
 );
 
