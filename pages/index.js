@@ -21,7 +21,7 @@ const submitRoute = e => {
     .set({
       date: new Date('13/11/2018'),
       pub: data.get('pub'),
-      distance: data.get('distance'),
+      distance: parseInt(data.get('distance'), 10),
       duration: data.get('duration'),
     });
 };
@@ -33,15 +33,19 @@ const NewRoute = () => (
     <form onSubmit={submitRoute}>
       <label>
         pub
-        <input type={'text'} name={'pub'} autoFocus />
+        <input type={'text'} name={'pub'} autoFocus required />
       </label>
       <label>
         distance
-        <input type={'text'} name={'distance'} />
+        <input type={'number'} name={'distance'} required />
       </label>
       <label>
         duration
-        <input type={'text'} name={'duration'} />
+        <input type={'text'} name={'duration'} required />
+      </label>
+      <label>
+        date
+        <input type={'date'} name={'date'} required />
       </label>
       <input type={'submit'} value={'submit'} />
     </form>
@@ -61,11 +65,11 @@ const Login = () => (
   <form onSubmit={login}>
     <label>
       email
-      <input type={'text'} name={'email'} autoFocus />
+      <input type={'text'} name={'email'} autoFocus required />
     </label>
     <label>
       password
-      <input type={'password'} name={'password'} />
+      <input type={'password'} name={'password'} required />
     </label>
     <input type={'submit'} value={'log in'} />
   </form>
