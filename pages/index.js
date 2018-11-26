@@ -90,9 +90,11 @@ const App = () => {
       initialisedFirebase.current = true;
     }
   });
-  return (
-    <React.StrictMode>{session ? <NewRoute /> : <Login />}</React.StrictMode>
-  );
+  return <div>{session ? <NewRoute /> : <Login />}</div>;
 };
 
-export default App;
+export default () => (
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
