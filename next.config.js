@@ -1,9 +1,9 @@
 const path = require('path');
-const withCSS = require('@zeit/next-css');
 
 const dev = process.env.NODE_ENV === 'development';
+const { PHASE_PRODUCTION_SERVER } = dev ? {} : require('next-server/constants');
 
-module.exports = withCSS({
+const config = {
   publicRuntimeConfig: {
     FIREBASE_API_KEY: dev
       ? require('./credentials/firebase-admin').client.apiKey
@@ -16,4 +16,13 @@ module.exports = withCSS({
     config.resolve.alias.ppk = path.resolve('./');
     return config;
   },
-});
+};
+
+console.log('config!!');
+console.log(config);
+
+module.exports = phase =>
+  console.log(phase === PHASE_PRODUCTION_SERVER) ||
+  phase === PHASE_PRODUCTION_SERVER
+    ? config
+    : require('@zeit/next-css')(config);
